@@ -5,14 +5,15 @@
     - Storing multiple variables per loop
  - Common subexpression elimination
 ```c++
-// Rewritten optimized code as comments
-                                 // long inj = i * n + j
+                                 // Rewritten optimized code as comments
+                                 //long inj = i * n + j
 up = val[(i - 1) * n + j]        //up = val[inj - n]
 down = val[(i + 1) * n + j]      //down = val[inj + n]
 left = val[i * n + j - 1]        //left = val[inj - 1]
 right = val[i * n + j + 1]       //right = val[inj + 1]
 ```
  - Instruction pipelining
+    - If two instructions of the same type are executed one immediately after another, for a single functional unit, they will be pipelined faster.
  - Inlining
  - Strength Reduction
  - Machine independent optimization
