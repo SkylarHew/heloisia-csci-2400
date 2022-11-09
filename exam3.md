@@ -4,6 +4,14 @@
  - Parallel Accumulators
     - Storing multiple variables per loop
  - Common subexpression elimination
+```c++
+// Optmizations
+// long inj = i * n + j
+up = val[(i - 1) * n + j] //up = val[inj - n]
+down = val[(i + 1) * n + j] //down = val[inj + n]
+left = val[i * n + j - 1] //left = val[inj - 1]
+right = val[i * n + j + 1] //right = val[inj + 1]
+```
  - Instruction pipelining
  - Inlining
  - Strength Reduction
